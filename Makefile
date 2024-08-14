@@ -12,3 +12,6 @@ build_image_with_tag:
 
 build_image_with_tag_no_cache:
 	docker build --no-cache -t python-poetry-docker:$(tag) .
+
+run_container:
+	docker run --name python-poetry-docker-container -p 8098:8098 python-poetry-docker:$(tag)
