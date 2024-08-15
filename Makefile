@@ -14,4 +14,4 @@ build_image_with_tag_no_cache:
 	docker build --no-cache -t fastapi-poetry-docker:$(tag) .
 
 run_container:
-	docker run --name fastapi-poetry-docker-container -p 8098:8098 fastapi-poetry-docker:$(tag)
+	docker run --name fastapi-poetry-docker-container -p 8098:8098 -d fastapi-poetry-docker:$(tag)
